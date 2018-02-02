@@ -3,33 +3,33 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="主页" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_menu_help"
+            android:title="帮助与反馈" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_sale_service"
+            android:icon="@drawable/ic_menu_sale_service"
+            android:title="售后服务" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_menu_setting"
+            android:title="设置" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="">
         <menu>
             <item
-                android:id="@+id/nav_close"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Close" />
+                android:id="@+id/nav_add"
+                android:icon="@drawable/ic_menu_add"
+                android:title="添加设备" />
             <item
                 android:id="@+id/nav_sign_out"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Sign out" />
+                android:icon="@drawable/ic_menu_sign_out"
+                android:title="退出登录" />
         </menu>
     </item>
 

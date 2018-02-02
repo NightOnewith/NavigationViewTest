@@ -14,17 +14,18 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/ic_touxiang" />
+        android:src="@drawable/ic_tx" />
 
     <TextView
         android:id="@+id/accoutName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="夜一先森"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 

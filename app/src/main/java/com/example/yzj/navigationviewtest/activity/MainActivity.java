@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yzj.navigationviewtest.R;
@@ -21,6 +22,7 @@ import com.example.yzj.navigationviewtest.utils.ToastUtil;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
+    private ImageView iv_user;
     private TextView accountName;
     //private TextView account;
     private Button btn_add_device;
@@ -56,6 +58,20 @@ public class MainActivity extends AppCompatActivity
         String[] strings = email.split("@");
         accountName.setText(strings[0]);
         //account.setText(email);
+        accountName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ToastUtil.showToast(getApplicationContext(), accountName.getText());
+            }
+        });
+
+        iv_user = navigationView.getHeaderView(0).findViewById(R.id.iv_user);
+        iv_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ToastUtil.showToast(getApplicationContext(), accountName.getText());
+            }
+        });
 
     }
 
@@ -92,19 +108,25 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            ToastUtil.showToast(getApplicationContext(), "This is test camera!");
-        } else if (id == R.id.nav_gallery) {
-            ToastUtil.showToast(getApplicationContext(), "This is test gallery!");
-        } else if (id == R.id.nav_slideshow) {
-            ToastUtil.showToast(getApplicationContext(), "This is test slideshow!");
-        } else if (id == R.id.nav_manage) {
-            ToastUtil.showToast(getApplicationContext(), "This is test manage!");
-        } else if (id == R.id.nav_close) {
+        if (id == R.id.nav_home) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_help) {
+            ToastUtil.showToast(getApplicationContext(), "帮助与反馈");
+        } else if (id == R.id.nav_sale_service) {
+            ToastUtil.showToast(getApplicationContext(), "售后服务");
+        } else if (id == R.id.nav_setting) {
+            ToastUtil.showToast(getApplicationContext(), "设置");
+        } else if (id == R.id.nav_add) {
             //Intent i = new Intent();
             //i.putExtra("count","1234");
             //setResult(MainActivity.Result_Code_Main, i);
-            finish();
+            //finish();
+
+            //ToastUtil.showToast(getApplicationContext(), "添加设备");
+
+            Intent intent = new Intent(this, ChooseDevType.class);
+            startActivityForResult(intent, ChooseDevType.Request_Code_Main);
         } else if (id == R.id.nav_sign_out) {
             finish();
             Intent intent = new Intent(this, LoginActivity.class);
@@ -126,6 +148,14 @@ public class MainActivity extends AppCompatActivity
                 break;
             default:
                 break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == ChooseDevType.Request_Code_Main && resultCode == ChooseDevType.Result_Code_Main){
+            //ToastUtil.showToast(getApplicationContext(), "返回主页");
         }
     }
 }

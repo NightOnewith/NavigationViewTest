@@ -21,6 +21,9 @@ import java.util.List;
 
 public class ChooseDevType extends AppCompatActivity {
 
+    public final static int Request_Code_Main = 100;
+    public final static int Result_Code_Main = 101;
+
     private List<DeviceType> mDatas = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private RecyclerAdapter recyclerAdapter;
@@ -57,6 +60,7 @@ public class ChooseDevType extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                setResult(Result_Code_Main);
                 finish();
             }
         });
