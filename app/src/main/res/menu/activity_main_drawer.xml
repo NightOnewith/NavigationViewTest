@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/nav_group_first"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_home"
@@ -20,17 +22,15 @@
             android:title="设置" />
     </group>
 
-    <item android:title="">
-        <menu>
-            <item
-                android:id="@+id/nav_add"
-                android:icon="@drawable/ic_menu_add"
-                android:title="添加设备" />
-            <item
-                android:id="@+id/nav_sign_out"
-                android:icon="@drawable/ic_menu_sign_out"
-                android:title="退出登录" />
-        </menu>
-    </item>
+    <group android:id="@+id/nav_group_second">
+        <item
+            android:id="@+id/nav_add"
+            android:icon="@drawable/ic_menu_add"
+            android:title="添加设备" />
+        <item
+            android:id="@+id/nav_sign_out"
+            android:icon="@drawable/ic_menu_sign_out"
+            android:title="退出登录" />
+    </group>
 
 </menu>
