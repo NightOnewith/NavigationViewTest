@@ -5,9 +5,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.yzj.navigationviewtest.R;
+import com.example.yzj.navigationviewtest.pojo.DeviceType;
 
 import java.util.List;
 
@@ -16,13 +18,13 @@ import java.util.List;
  */
 
 public class RecyclerAdapter extends RecyclerView.Adapter<MyViewHolder> {
-    private List<String> mDatas;
+    private List<DeviceType> mDatas;
     private Context mContext;
     private LayoutInflater mInflater;
 
     private OnMyItemClickListener listener;
 
-    public RecyclerAdapter(Context mContext, List<String> mDatas) {
+    public RecyclerAdapter(Context mContext, List<DeviceType> mDatas) {
         this.mDatas = mDatas;
         this.mContext = mContext;
         mInflater = LayoutInflater.from(mContext);
@@ -48,9 +50,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<MyViewHolder> {
      */
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
-        holder.textView.setText(mDatas.get(position));
-        if (listener!=null) {
-            holder.textView.setOnClickListener(new View.OnClickListener() {
+        holder.textView.setText(mDatas.get(position).getName());
+        holder.imageView.setImageResource(mDatas.get(position).getImageId());
+        if (listener != null) {
+            holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     listener.myClick(v,position);
@@ -80,9 +83,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<MyViewHolder> {
 class MyViewHolder extends RecyclerView.ViewHolder{
 
     TextView textView;
+    ImageView imageView;
 
     public MyViewHolder(View itemView) {
         super(itemView);
         textView = itemView.findViewById(R.id.type_name);
+        imageView = itemView.findViewById(R.id.type_cover);
     }
 }

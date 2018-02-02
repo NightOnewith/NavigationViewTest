@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.example.yzj.navigationviewtest.R;
 import com.example.yzj.navigationviewtest.adapter.RecyclerAdapter;
+import com.example.yzj.navigationviewtest.pojo.DeviceType;
 import com.example.yzj.navigationviewtest.utils.ToastUtil;
 
 import java.util.ArrayList;
@@ -19,9 +20,17 @@ import java.util.List;
 
 public class ChooseDevType extends AppCompatActivity {
 
-    private List<String> mDatas = new ArrayList<>();
+    private List<DeviceType> mDatas = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private RecyclerAdapter recyclerAdapter;
+
+    public static final int DEVICE_TYPE_LOCK = 1;
+    public static final int DEVICE_TYPE_HUB = 2;
+    public static final int DEVICE_TYPE_GENESIS = 3;
+    public static final int DEVICE_TYPE_DOOR_LOCK = 4;
+    public static final int DEVICE_TYPE_DOOR_SENSOR = 5;
+    public static final int DEVICE_TYPE_DOOR_LOCK2 = 6;
+    public static final int DEVICE_TYPE_MOTION_SENSOR = 7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +45,8 @@ public class ChooseDevType extends AppCompatActivity {
 
         recyclerAdapter.setOnMyItemClickListener(new RecyclerAdapter.OnMyItemClickListener() {
             @Override
-            public void myClick(View v, int pos) {
-                ToastUtil.showToast(getApplicationContext(), "onClick:第"+pos+"个item");
+            public void myClick(View v, int positon) {
+                ToastUtil.showToast(getApplicationContext(), "onClick:第"+positon+"个item");
             }
         });
     }
@@ -47,8 +56,20 @@ public class ChooseDevType extends AppCompatActivity {
     }
 
     private void initData() {
-        for (int i = 0; i < 30; i++) {
-            mDatas.add("锁具: "+i);
-        }
+        DeviceType lock = new DeviceType(DEVICE_TYPE_LOCK, getString(R.string.safe_lock), R.drawable.img_safelocks);
+        DeviceType hub = new DeviceType(DEVICE_TYPE_HUB, getString(R.string.HUB), R.drawable.img_hub);
+        DeviceType genesis = new DeviceType(DEVICE_TYPE_GENESIS, getString(R.string.GENESIS), R.drawable.img_ds_doorlock_without_logo);
+        DeviceType doorLock  = new DeviceType(DEVICE_TYPE_DOOR_LOCK, getString(R.string.door_lock), R.drawable.img_ds_dl);
+        DeviceType doorLock2 = new DeviceType(DEVICE_TYPE_DOOR_LOCK2, getString(R.string.door_lock2), R.drawable.img_door_lock2);
+        DeviceType doorSensor = new DeviceType(DEVICE_TYPE_DOOR_SENSOR, getString(R.string.door_sensor), R.drawable.img_ds_sensor_without_logo);
+        DeviceType motionSensor = new DeviceType(DEVICE_TYPE_MOTION_SENSOR, getString(R.string.motion_sensor), R.drawable.img_motion_sensor);
+        mDatas.add(lock);
+        mDatas.add(hub);
+        mDatas.add(genesis);
+        mDatas.add(doorLock);
+        mDatas.add(doorLock2);
+        mDatas.add(doorSensor);
+        mDatas.add(motionSensor);
+        //recyclerAdapter.notifyDataSetChanged();
     }
 }
