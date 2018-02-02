@@ -48,7 +48,7 @@ public class ChooseDevType extends AppCompatActivity {
 
     private void initData() {
         for (int i = 0; i < 30; i++) {
-            mDatas.add("条目 ——"+i);
+            mDatas.add("锁具: "+i);
         }
     }
 }
