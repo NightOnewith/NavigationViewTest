@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">NavigationViewTest</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">登 陆</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- Home -->
+    <string name="all_devices_status_normal">所有设备正常</string>
+    <string name="my_devices">我的设备</string>
+    <string name="group_manager_with_ellipsize">分组管理…</string>
+    <string name="group_manager">分组管理</string>
+    <string name="otc_unlock">OTC解锁</string>
+    <string name="share">分享</string>
+    <string name="otc_content">OTC 解锁码是一次性临时性解锁码，为确保安全性，每个OTC仅且能使用一次，并请只告知给可信任人士</string>
+    <string name="create_otc_password_status_succeeded">已生成OTC解锁码</string>
+    <string name="test_password">1234 5678</string>
+    <string name="otc_valid_date">在 %s 之前有效</string>
+    <string name="unlock">解锁</string>
+    <string name="unlock_code_admin">请输入管理员的开锁密码</string>
+    <string name="this_device_owner">此设备登记用户</string>
+    <string name="create_password">生成解锁码</string>
+    <string name="you_get_a_invitation_from">你收到一个来自 %s 的邀请</string>
+    <string name="active_the_device">激活设备</string>
+    <string name="start_adding_device">开始添加设备</string>
+    <string name="you_have_not_any_device">您目前还未添加任何东屋智能设备</string>
+    <string name="status_link">未连接</string>
+    <string name="status_vibration">振动报警</string>
+    <string name="status_tamper">防拆报警</string>
+    <string name="status_normally_open1">常开禁止</string>
+    <string name="status_normally_open2">门已常开</string>
+    <string name="status_visitor1">禁止访客</string>
+    <string name="status_visitor2">允许访客</string>
+    <string name="status_doorsensor_close">关</string>
+    <string name="status_doorsensor_open">开</string>
+    <string name="status_motionsensor_move">检测到动作</string>
+    <string name="status_motionsensor_stop">未检测到动作</string>
+    <string name="otc_msg1">开锁密码：</string>
+    <string name="otc_msg2">，请妥善保管此密码，密码将在使用后失效。</string>
+    <string name="otc_msg3">，有效期截至到 </string>
+    <string name="unlock_otc">OTC开锁</string>
+    <string name="unlock_bluetooth">蓝牙开锁</string>
+    <string name="unlock_remote">远程开锁</string>
+    <string name="lock">闭锁</string>
+    <string name="one_hour">1小时</string>
+    <string name="two_hour">2小时</string>
+    <string name="three_hour">3小时</string>
+    <string name="four_hour">4小时</string>
+    <string name="five_hour">5小时</string>
+    <string name="set_time">指定时间</string>
+    <string name="modify_time">修改指定时间</string>
+    <string name="validity">有效期</string>
+    <string name="unlock_bluetooth_title">蓝牙开锁</string>
+    <string name="unlock_remote_title">远程开锁</string>
+    <string name="title_activity_choose_dev_type">ChooseDevType</string>
+
+    <!-- Device -->
+    <string name="device_type">设备类型</string>
+    <string name="select_device">选择添加设备</string>
+    <string name="select_hub">选择一个HUB</string>
+    <string name="select_home_network">选择一个家庭网络</string>
+    <string name="set_password">WIFI密码</string>
+    <string name="bind_device">绑定设备</string>
+    <string name="add_device">添加设备</string>
+    <string name="skip">跳过</string>
+
+    <string name="safe_lock">箱柜锁</string>
+    <string name="door_lock">一代家用锁</string>
+    <string name="HUB">HUB</string>
+    <string name="GENESIS">GENESIS</string>
+    <string name="door_lock2">二代家用锁</string>
+    <string name="door_sensor">门窗传感器</string>
+    <string name="motion_sensor">运动传感器</string>
+    <string name="unknown">敬请期待</string>
+
+    <string name="prompt_near_by">请确保手机在运行中的设备附近</string>
+    <string name="prompt_cant_find_device">找不到需要添加的设备</string>
+    <string name="prompt_searching">正在搜索中…</string>
+    <string name="prompt_search_nearby">搜索到附近的设备</string>
+
+    <string name="prompt_near_by_hub">请确保手机在运行中的HUB附近</string>
+
+    <string name="prompt_set_username">设定在该设备上的用户名</string>
+    <string name="prompt_username_format_long">名字仅限英文字母和数字</string>
+    <string name="prompt_username_format">仅限英文和数字</string>
+    <string name="error_invalid_username">用户名格式不正确</string>
+
+    <string name="prompt_set_device_name">为设备设定名称</string>
+    <string name="prompt_device_name_format_long">为设备建立一个容易记认的名字</string>
+    <string name="prompt_device_name_format">设备名称</string>
+    <string name="error_invalid_devicename">设备名称格式不正确</string>
+    <string name="error_invalid_lockpassword">密码必须设置为6位</string>
+
+    <string name="prompt_select_home_network">请选择您家中的WIFI</string>
+    <string name="prompt_select_home_network_format_long">请选择您常用的WIFI，此WIFI用于HUB连接网络</string>
+
+    <string name="prompt_set_password">请设定您的开锁密码</string>
+    <string name="prompt_password_format">仅限数字</string>
+    <string name="prompt_password_format_long">密码仅限6位数字</string>
+
+    <string name="prompt_set_password_of_home_network">请输入 %s 的密码</string>
+    <string name="prompt_password_of_home_network_format">WIFI密码</string>
+    <string name="prompt_password_of_home_network_format_long">HUB会验证此密码并连接到网络</string>
+
+    <string name="action_need_help">需要帮助？</string>
+    <string name="action_next">下一步</string>
+    <string name="action_start">开始体验</string>
+
+    <string name="error_request_bluetooth">如要添加设备，请点击右方按钮打开蓝牙</string>
+    <string name="step_capture_finger">记录指纹</string>
+    <string name="prompt_step_capture_finger">请放置你想要记录的手指在设备的指纹扫描窗口</string>
+    <string name="step_set_password">设置密码</string>
+    <string name="prompt_step_set_password">请设置设备的密码</string>
+    <string name="step_test">设置完毕，测试一下吧</string>
+    <string name="prompt_step_test_fingerprint">请放手指在设备指纹扫描窗口</string>
+    <string name="prompt_step_test_code">请输入您的开锁密码</string>
+    <string name="action_retry">重试</string>
+
+    <string name="show_password">显示密码</string>
+    <string name="password_error_please_retry">密码错误，请重试</string>
+
+    <string name="error_bond_fail">配对失败，请重试</string>
+    <string name="prompt_input_pair_code">请输入配对码</string>
+    <string name="prompt_input_pair_code_long">请输入设备显示屏上显示的6位配对码</string>
+    <string name="cant_see_pair_code">看不到配对码?</string>
+    <string name="action_how_to_solve">看看如何解决</string>
+    <string name="error_pair_code">配对码错误，请重试</string>
+
+    <string name="generate_pairing_code">生成配对码</string>
+    <string name="input_pairing_code">输入配对码</string>
+    <string name="pairing_step_1_title">1. 选择 My Menu</string>
+    <string name="pairing_step_1_sub_title">打开菜单并选择第一个选项&lt;My Menu&gt;</string>
+    <string name="pairing_step_2_title">2. 选择 Login Admin</string>
+    <string name="pairing_step_2_sub_title">选择&lt;Login Admin&gt;选项</string>
+    <string name="pairing_step_3_title">3. 输入 密码</string>
+    <string name="pairing_step_3_sub_title">输入密码登录管理员账号</string>
+    <string name="pairing_step_4_title">4. 选择 Authorize Phone</string>
+    <string name="pairing_step_4_sub_title">选择&lt;Authorize Phone&gt;选项</string>
+    <string name="pairing_step_5_title">完成</string>
+    <string name="pairing_step_5_sub_title">门锁已经生成了配对码</string>
+    <string name="prompt_pairing_code">此图片仅作演示\n请检查设备上显示的匹配码</string>
+</resources>

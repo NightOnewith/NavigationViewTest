@@ -1,0 +1,57 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/tv_all_devices_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
+        android:visibility="invisible"
+        android:text="@string/all_devices_status_normal"
+        android:textColor="@color/color_7f6b6c70"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_add_device"
+        android:layout_width="330dp"
+        android:layout_height="480dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_sad_face"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="254dp"
+            android:gravity="center_horizontal"
+            android:text="@string/you_have_not_any_device"
+            android:textColor="@color/color_7f7f7f"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_add_device"
+            style="@style/Button"
+            android:layout_width="216dp"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="350dp"
+            android:text="@string/start_adding_device"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
