@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.yzj.navigationviewtest.R;
@@ -23,6 +24,7 @@ public class ChooseDevType extends AppCompatActivity {
     private List<DeviceType> mDatas = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private RecyclerAdapter recyclerAdapter;
+    private Toolbar toolbar;
 
     public static final int DEVICE_TYPE_LOCK = 1;
     public static final int DEVICE_TYPE_HUB = 2;
@@ -39,20 +41,30 @@ public class ChooseDevType extends AppCompatActivity {
         initView();
         initData();
 
+        setSupportActionBar(toolbar);
+
         recyclerAdapter = new RecyclerAdapter(this,mDatas);
         mRecyclerView.setAdapter(recyclerAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
         recyclerAdapter.setOnMyItemClickListener(new RecyclerAdapter.OnMyItemClickListener() {
             @Override
-            public void myClick(View v, int positon) {
-                ToastUtil.showToast(getApplicationContext(), "onClick:第"+positon+"个item");
+            public void myClick(View v, int pos) {
+                ToastUtil.showToast(getApplicationContext(), mDatas.get(pos).getName());
+            }
+        });
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }
 
     private void initView() {
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
     }
 
     private void initData() {
