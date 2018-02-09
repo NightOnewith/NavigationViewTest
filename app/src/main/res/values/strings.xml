@@ -6,6 +6,7 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="tv_user_read">我已阅读并同意相关用户协议</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -153,4 +154,5 @@
     <string name="pairing_step_5_title">完成</string>
     <string name="pairing_step_5_sub_title">门锁已经生成了配对码</string>
     <string name="prompt_pairing_code">此图片仅作演示\n请检查设备上显示的匹配码</string>
+    <string name="title_activity_register">RegisterActivity</string>
 </resources>

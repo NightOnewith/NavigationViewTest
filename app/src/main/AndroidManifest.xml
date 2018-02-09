@@ -28,6 +28,10 @@
             android:name=".activity.ChooseDevType"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
