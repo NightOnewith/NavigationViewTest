@@ -111,14 +111,14 @@ public class RegisterActivity extends AppCompatActivity {
                 "链接：https://www.yzj.com/\n" +
                 "來源：东屋电气\n" +
                 "著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。");
-        myDialog.setYesOnclickListener("确定", new MyDialog.onYesOnclickListener() {
+        myDialog.setYesOnclickListener("同意", new MyDialog.onYesOnclickListener() {
             @Override
             public void onYesClick() {
                 myDialog.dismiss();
                 mCheckBox.setChecked(true);
             }
         });
-        myDialog.setNoOnclickListener("取消", new MyDialog.onNoOnclickListener() {
+        myDialog.setNoOnclickListener("拒绝", new MyDialog.onNoOnclickListener() {
             @Override
             public void onNoClick() {
                 myDialog.dismiss();
