@@ -155,4 +155,5 @@ public class MyDialog extends Dialog {
     public interface onNoOnclickListener {
         public void onNoClick();
     }
+
 }
